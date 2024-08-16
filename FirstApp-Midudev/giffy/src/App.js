@@ -1,23 +1,18 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react';
 import './App.css'
-import getGifs from './services/getGifs'
-import ListOfGifs from './components/ListOfGifs'
+import {Link, Route} from 'wouter'
+import Home from './pages/Home';
 
-
-function App() {
-  const [gifs, setGifs] = useState([])
-
-  useEffect(function () {
-    getGifs({keyword: 'programming'}).then(gifs => setGifs(gifs))
-  }, [])
+export default function App() {
 
   return (
     <div className="App">
       <section className="App-content">
-        <ListOfGifs gifs={gifs}/>
+        <Link to='/'>
+          <img className='App-logo' alt='Giffy logo' src='/logo192.png'></img>
+        </Link>
+        <Route component={Home} path="/"/>          
       </section>
     </div>
   )
 }
-
-export default App;

@@ -1,8 +1,0 @@
-Para iniciar el proyecto, utilizamos los comandos de react:
-    npx create-react-app [NOMBRE]
-Levantamos la aplicación con:
-    npm start
-
-'useEffect' se ejecuta cada vez que se renderiza el componente. Si no le añadimos dependencias '[]' solo se ejecuta una vez al inicio
-
-
